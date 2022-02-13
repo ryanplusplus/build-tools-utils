@@ -4,9 +4,6 @@ $(eval
   $1_CPPFLAGS := $(CPPFLAGS)
   $1_CFLAGS := $(CFLAGS)
   $1_CXXFLAGS := $(CXXFLAGS)
-  $1_DEFINES := $(DEFINES)
-  $1_INC_DIRS := $(INC_DIRS)
-  $1_SYS_INC_DIRS := $(SYS_INC_DIRS)
 )
 endef
 
