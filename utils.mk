@@ -1,5 +1,5 @@
 define set_default_flags
-$(eval
+unused := $(eval
   $1_ASFLAGS := $(ASFLAGS)
   $1_CPPFLAGS := $(CPPFLAGS)
   $1_CFLAGS := $(CFLAGS)
@@ -8,7 +8,7 @@ $(eval
 endef
 
 define create_lib
-$(eval
+unused := $(eval
   LIBS += $1
 )
 endef
@@ -19,7 +19,7 @@ $(call set_default_flags,$1)
 endef
 
 define create_interface_lib
-$(eval
+unused := $(eval
   INTERFACE_LIBS += $1
 )
 endef
