@@ -3,13 +3,13 @@ $(subst $(shell pwd)/,,$(dir $(realpath $(lastword $(MAKEFILE_LIST)))))
 endef
 
 define create_lib
-$(eval
+$(eval \
 LIBS += $1
 )
 endef
 
 define create_lib_with_defaults
-$(eval
+$(eval \
 LIBS += $1
 $1_ASFLAGS := $(ASFLAGS)
 $1_CPPFLAGS := $(CPPFLAGS)
@@ -19,13 +19,13 @@ $1_CXXFLAGS := $(CXXFLAGS)
 endef
 
 define create_interface_lib
-$(eval
+$(eval \
 INTERFACE_LIBS += $1
 )
 endef
 
 define create_interface_lib_with_defaults
-$(eval
+$(eval \
 INTERFACE_LIBS += $1
 $1_ASFLAGS := $(ASFLAGS)
 $1_CPPFLAGS := $(CPPFLAGS)
