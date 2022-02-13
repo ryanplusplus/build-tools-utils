@@ -1,3 +1,7 @@
+define current_path
+$(subst $(shell pwd)/,,$(dir $(realpath $(lastword $(MAKEFILE_LIST)))))
+endef
+
 define create_lib
 $(eval
 LIBS += $1
@@ -28,8 +32,4 @@ $1_CPPFLAGS := $(CPPFLAGS)
 $1_CFLAGS := $(CFLAGS)
 $1_CXXFLAGS := $(CXXFLAGS)
 )
-endef
-
-define current_path
-$(subst $(shell pwd)/,,$(dir $(realpath $(lastword $(MAKEFILE_LIST)))))
 endef
